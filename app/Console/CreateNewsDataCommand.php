@@ -2,8 +2,8 @@
 
 namespace App\Console;
 
-use App\Http\News;
-use App\Http\NewsSource;
+use App\Http\Models\News;
+use App\Http\models\NewsSource;
 use DateTime;
 use Exception;
 use Illuminate\Console\Command;
@@ -40,9 +40,13 @@ class CreateNewsDataCommand extends Command
             exit();
         }
 
+        $response = Http::get($this->getNewsUrl());
+        $newsData = $response->json()['articles'];
+        dd($newsData);
         try {
             $response = Http::get($this->getNewsUrl());
             $newsData = $response->json()['articles'];
+            dd($newsData);
 
             foreach ($newsData as $news) {
                 $publishedAt = new DateTime($news['publishedAt']);

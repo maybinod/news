@@ -10,6 +10,10 @@ git clone git@github.com:maybinod/news.git
 cp .env.example .env
 ````
 
+#### Create account in newsapi site https://newsapi.org/
+
+#### Add newsapi key to this value `NEWS_API_KEY` in .env file
+
 #### Generate key
 ````
 php artisan key:generate
