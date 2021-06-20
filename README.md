@@ -2,7 +2,7 @@
 
 ### Clone the project
 ```
-git clone git...com
+git clone git@github.com:maybinod/news.git
 ```
 
 #### Copy .env.example file to .env
