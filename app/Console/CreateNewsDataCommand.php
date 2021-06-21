@@ -3,7 +3,7 @@
 namespace App\Console;
 
 use App\Http\Models\News;
-use App\Http\models\NewsSource;
+use App\Http\Models\NewsSource;
 use DateTime;
 use Exception;
 use Illuminate\Console\Command;
