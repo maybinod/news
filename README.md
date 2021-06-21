@@ -49,3 +49,8 @@ npm run hot
 ````
 php artisan serve
 ````
+
+#### Run Test
+````
+php artisan test
+````
