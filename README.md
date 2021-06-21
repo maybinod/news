@@ -4,6 +4,10 @@
 ```
 git clone https://github.com/maybinod/news.git
 ```
+#### Install composer
+````
+composer install
+````
 
 #### Copy .env.example file to .env
 ````
