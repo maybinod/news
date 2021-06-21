@@ -37,7 +37,7 @@ php artisan news:create
 
 #### Install npm
 ````
-npm run install
+npm install
 ````
 
 #### Run vue app in hot reload mode
