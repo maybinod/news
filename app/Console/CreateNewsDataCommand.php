@@ -40,13 +40,9 @@ class CreateNewsDataCommand extends Command
             exit();
         }
 
-        $response = Http::get($this->getNewsUrl());
-        $newsData = $response->json()['articles'];
-        dd($newsData);
         try {
             $response = Http::get($this->getNewsUrl());
             $newsData = $response->json()['articles'];
-            dd($newsData);
 
             foreach ($newsData as $news) {
                 $publishedAt = new DateTime($news['publishedAt']);
@@ -82,6 +78,6 @@ class CreateNewsDataCommand extends Command
 
     protected function getNewsUrl()
     {
-        return 'https://newsapi.org/v2/everything?q=tesla&from=2021-05-19&sortBy=publishedAt&apiKey='.$this->getKey();
+        return 'https://newsapi.org/v2/everything?q=tesla&sortBy=publishedAt&apiKey='.$this->getKey();
     }
 }
